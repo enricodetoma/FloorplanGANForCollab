@@ -173,7 +173,7 @@ class wireframeDataset_Rplan(Dataset):
         to_fill = np.zeros((num_elements_to_fill, data.shape[1]))
         data_ = np.concatenate([data, to_fill], axis=0).astype(np.float32)
         mask = np.concatenate([np.zeros(data.shape[0]), np.ones(
-            num_elements_to_fill)]).astype(np.bool)
+            num_elements_to_fill)]).astype(bool)
         return data_, mask
 
     def __len__(self):
@@ -240,7 +240,7 @@ class wireframeDataset_Rplan(Dataset):
                 constant_values=(-1, -1)
             )
                 for r in rect_types],
-            dtype=np.int
+            dtype=int
         )
         self.Xc = {classid: np.array(lst) for classid ,lst in Xc.items()}
         self.Yc = {classid: np.array(lst) for classid ,lst in Yc.items()}

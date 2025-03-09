@@ -3,14 +3,14 @@ from yacs.config import CfgNode as CN
 _C = CN()
 
 _C.SYSTEM = CN()
-_C.SYSTEM.NUM_GPUS = 8
-_C.SYSTEM.NUM_WORKERS = 4
+_C.SYSTEM.NUM_GPUS = 0
+_C.SYSTEM.NUM_WORKERS = 2
 _C.SYSTEM.HOSTNAMES = []
 
 _C.DATASET = CN()
 _C.DATASET.NAME = "rplan"
-_C.DATASET.SUBSET = ""
-_C.DATASET.BATCHSIZE = 128
+_C.DATASET.SUBSET = "subset_10k.pkl"
+_C.DATASET.BATCHSIZE = 8
 
 _C.MODEL = CN()
 _C.MODEL.GENERATOR = CN()
@@ -36,6 +36,7 @@ _C.PATH.Z_FILE = "fixed_z/fixed_xyaw_rplan_0320.pkl"
 _C.PATH.LOG_DIR = "runs_rplan"
 
 _C.MANUAL = CN()
+_C.MANUAL.RPLAN_PATH = "/content/FloorplanGANForCollab/data_FloorplanGAN/pkls"
 
 
 def get_cfg():
