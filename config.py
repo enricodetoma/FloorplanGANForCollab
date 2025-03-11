@@ -9,7 +9,7 @@ _C.SYSTEM.HOSTNAMES = []
 
 _C.DATASET = CN()
 _C.DATASET.NAME = "rplan"
-_C.DATASET.SUBSET = "subset_10k.pkl"
+_C.DATASET.SUBSET = ""
 _C.DATASET.BATCHSIZE = 8
 
 _C.MODEL = CN()
