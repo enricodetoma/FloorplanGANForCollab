@@ -91,7 +91,8 @@ def train(parallel=False):
     else:
         device = torch.device("cuda:0")
     real_dataset = wireframeDataset_Rplan(cfg)
-    checkpoint = './params/params_rplan_{0}.pkl'.format(cfg.MANUAL.DATE)
+    #checkpoint = './params/params_rplan_{0}.pkl'.format(cfg.MANUAL.DATE)
+    checkpoint = '/content/drive/params_rplan.pkl'
     batch_size = cfg.DATASET.BATCHSIZE
 
     if parallel:
