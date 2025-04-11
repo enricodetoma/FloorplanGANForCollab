@@ -3,8 +3,8 @@ from yacs.config import CfgNode as CN
 _C = CN()
 
 _C.SYSTEM = CN()
-_C.SYSTEM.NUM_GPUS = 0
-_C.SYSTEM.NUM_WORKERS = 2
+_C.SYSTEM.NUM_GPUS = 8
+_C.SYSTEM.NUM_WORKERS = 4
 _C.SYSTEM.HOSTNAMES = []
 
 _C.DATASET = CN()
