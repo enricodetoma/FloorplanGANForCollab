@@ -119,7 +119,6 @@ class wireframeDataset_Rplan(Dataset):
         self.data = dict()  # 数据加载到内存， 以字典保存
         available_classid = set()
         # 统计房间类型
-        print(self.path)
         for name in tqdm(self.names):
             with open(os.path.join(self.path, name), 'rb') as pkl_file:
                 layout = pickle.load(pkl_file)
